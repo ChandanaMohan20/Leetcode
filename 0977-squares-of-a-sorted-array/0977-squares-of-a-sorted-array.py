@@ -4,13 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
+        l = 0
+        r = len(nums) -1
         a = []
-        for i in range(0,len(nums)):
-            val = nums[i] * nums[i]
-            a.append(val)
-            
-        a.sort()
+        while l<=r:
+            if nums[l]*nums[l] > nums[r]* nums[r]:
+                a.append(nums[l]*nums[l])
+                l=l+1
                 
+            else:
+                a.append(nums[r]*nums[r])
+                r = r-1
                 
-        return a
-            
+        return a[::-1]
