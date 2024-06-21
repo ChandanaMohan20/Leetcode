@@ -6,11 +6,10 @@ class Solution(object):
         """
         
         res = 0
-        
-        for i in range(0,len(nums)+1):
-            res = res ^ i
+        numsum = 0
+        for i in range(len(nums)):
+            res = res + i
+            numsum = numsum + nums[i]
             
-        for num in nums:
-            res = num ^ res
-            
-        return res
+        ans = res+len(nums)-numsum
+        return ans
