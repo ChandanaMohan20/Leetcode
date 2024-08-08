@@ -11,9 +11,8 @@ class Solution(object):
         count = 0
         
         for i in s:
-            for k in j:
-                if i == k:
-                    count = count+1
+            if i in j:
+                count = count+1
         
         
             
