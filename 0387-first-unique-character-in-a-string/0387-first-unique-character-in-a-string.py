@@ -12,6 +12,7 @@ class Solution:
                 count[s[i]] +=1
                 
         minfre = min(count.values())
+        
         if minfre!=1:
             return -1
         
@@ -22,11 +23,9 @@ class Solution:
             if j == minfre:
                 res.append(i)
         
-        if len(res)==0:
-            return -1
-        else:
-            for i,j in last.items():
-                if i==res[0]:
-                    return j 
-                
+       
+        for i,j in last.items():
+            if i==res[0]:
+                return j 
+
        
