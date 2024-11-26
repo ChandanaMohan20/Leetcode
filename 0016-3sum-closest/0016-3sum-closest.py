@@ -1,7 +1,6 @@
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         n = len(nums)
-        HM = {}
         nums.sort()
         closesum = float('-inf')
         for i in range(0,n-2):
