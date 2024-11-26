@@ -13,6 +13,8 @@ class Solution:
                     r = r-1
                 else:
                     res = res+ r-l
+                    
+                    
                     l = l+1
         
         return res
