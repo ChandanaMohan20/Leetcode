@@ -4,7 +4,7 @@ class Solution:
         nums.sort()
         n = len(nums)
         for i in range(0, n-2):
-            if i>0 and nums[i]==nums[i-1]:
+            if i>0 and nums[i]==nums[i-1]:# skipping dupe
                 continue
             l = i+1
             r = n-1
@@ -18,9 +18,9 @@ class Solution:
                     a = [nums[i],nums[l],nums[r]]
                     
                     res.append(a)
-                    while l<r and nums[l]==nums[l+1]:
+                    while l<r and nums[l]==nums[l+1]: #skipping dupe
                         l = l+1
-                    while l<r and nums[r]==nums[r-1]:
+                    while l<r and nums[r]==nums[r-1]: #skipping dupe
                         r = r-1
                     
                     l = l+1
