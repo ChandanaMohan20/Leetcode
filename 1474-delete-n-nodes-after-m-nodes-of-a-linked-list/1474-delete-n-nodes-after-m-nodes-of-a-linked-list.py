@@ -21,7 +21,6 @@ class Solution:
                 
             if current:
                 
-                
                 current.next = temp
                 current = temp
         return head
