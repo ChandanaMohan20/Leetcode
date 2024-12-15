@@ -16,7 +16,10 @@ class Solution:
                 hm2[i]+=1
                 
         for i,j in hm1.items():
-            if i not in hm2.keys() or j>hm2[i]:
+            if i not in hm2.keys():
+            
+                return False
+            if j> hm2[i]:
                 return False
         return True
             
