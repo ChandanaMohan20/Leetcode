@@ -6,14 +6,18 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        temp = set()
-        
-        while head:
-            if head in temp:
-                return True
+        dummy = ListNode()
+        dummy.next = head
 
-            temp.add(head)
-            head = head.next
+        slow = fast = dummy
+
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+
+            if fast == slow:
+                return True
         return False
-        
-        
+
+        # TC = O(n)
+        #Space Compexity  = O(1)
